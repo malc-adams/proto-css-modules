@@ -1,6 +1,6 @@
 function component() {
   const element = document.createElement('div');
-  element.innerHTML = "boilerplate-webpack";
+  element.innerHTML = "proto-css-modules";
   return element;
 }
 

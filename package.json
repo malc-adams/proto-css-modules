@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate-webpack",
-  "version": "1.2.0",
+  "name": "proto-css-modules",
+  "version": "0.1.0",
   "description": "",
   "private": true,
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/malc-adams/boilerplate-webpack.git"
+    "url": "git+https://github.com/malc-adams/proto-css-modules.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/malc-adams/boilerplate-webpack/issues"
+    "url": "https://github.com/malc-adams/proto-css-modules/issues"
   },
-  "homepage": "https://github.com/malc-adams/boilerplate-webpack#readme",
+  "homepage": "https://github.com/malc-adams/proto-css-modules#readme",
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/plugin-transform-runtime": "^7.17.0",

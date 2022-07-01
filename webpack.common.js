@@ -13,10 +13,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'boilerplate-webpack',
+      title: 'proto-css-modules',
       meta: {
         "viewport": "width=device-width,initial-scale=1",
-        "description": "My Webpack boilerplate",
+        "description": "Prototype CSS Modules",
       },
       template: 'src/index.html',
     }),

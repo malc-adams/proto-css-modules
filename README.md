@@ -1,1 +1,1 @@
-# boilerplate-webpack
+# proto-css-modules
