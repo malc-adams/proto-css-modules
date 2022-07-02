@@ -1,4 +1,4 @@
-@import 'module-config';
+@import "breakpoints";
 
 .grid {
   border: dashed 1px #abc;
@@ -13,10 +13,56 @@
   }
 }
 
-@media screen and (min-width: $test-breakpoint) {
-  .grid {
-    .item {
-      background-color: #abc;
+@media screen and (min-width: $breakpoint1) {
+  .bp-1-2-3 {
+    .grid {
+      .item {
+        background-color: cyan;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  .bp-1-2-3 {
+    .grid {
+      .item {
+        background-color: lightgreen;
+      }
+    }
+  }
+
+  .bp-2-3 {
+    .grid {
+      .item {
+        background-color: cyan;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint3) {
+  .bp-1-2-3 {
+    .grid {
+      .item {
+        background-color: orange;
+      }
+    }
+  }
+
+  .bp-2-3 {
+    .grid {
+      .item {
+        background-color: lightgreen;
+      }
+    }
+  }
+
+  .bp-3 {
+    .grid {
+      .item {
+        background-color: cyan;
+      }
     }
   }
 }
