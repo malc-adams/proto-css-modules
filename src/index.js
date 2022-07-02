@@ -4,8 +4,8 @@ function init() {
   const element = document.createElement('div');
 
   // Create the unique modules.
-  const grid1 = createGrid(['bp-1-2', 'bp-2-3', 'bp-3-4']);
-  const grid2 = createGrid(['bp-2-2', 'bp-3-3']);
+  const grid1 = createGrid(['b1-l2', 'b2-l3', 'b3-l4']);
+  const grid2 = createGrid(['b2-l2', 'b3-l3']);
 
   grid1.classList.add(style.gridWrapper, style.fullWidth);
   grid2.classList.add(style.gridWrapper, style.partWidth);
