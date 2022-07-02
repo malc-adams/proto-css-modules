@@ -13,80 +13,62 @@
   }
 }
 
+@mixin one-column {
+  .grid {
+    .item {
+      background-color: cyan;
+    }
+  }
+}
+
+@mixin two-columns {
+  .grid {
+    .item {
+      background-color: lightgreen;
+    }
+  }
+}
+
+@mixin three-columns {
+  .grid {
+    .item {
+      background-color: orange;
+    }
+  }
+}
+
 @media screen and (min-width: $breakpoint1) {
   .bp-1-1 {
-    .grid {
-      .item {
-        background-color: cyan;
-      }
-    }
+    @include one-column();
   }
-
   .bp-1-2 {
-    .grid {
-      .item {
-        background-color: lightgreen;
-      }
-    }
+    @include two-columns();
   }
-
   .bp-1-3 {
-    .grid {
-      .item {
-        background-color: orange;
-      }
-    }
+    @include three-columns();
   }
 }
 
 @media screen and (min-width: $breakpoint2) {
   .bp-2-1 {
-    .grid {
-      .item {
-        background-color: cyan;
-      }
-    }
+    @include one-column();
   }
-
   .bp-2-2 {
-    .grid {
-      .item {
-        background-color: lightgreen;
-      }
-    }
+    @include two-columns();
   }
-
   .bp-2-3 {
-    .grid {
-      .item {
-        background-color: orange;
-      }
-    }
+    @include three-columns();
   }
 }
 
 @media screen and (min-width: $breakpoint3) {
   .bp-3-1 {
-    .grid {
-      .item {
-        background-color: cyan;
-      }
-    }
+    @include one-column();
   }
-
   .bp-3-2 {
-    .grid {
-      .item {
-        background-color: lightgreen;
-      }
-    }
+    @include two-columns();
   }
-
   .bp-3-3 {
-    .grid {
-      .item {
-        background-color: orange;
-      }
-    }
+    @include three-columns();
   }
 }
