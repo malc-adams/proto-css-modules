@@ -20,7 +20,7 @@
 @mixin one-column {
   .grid {
     .item {
-      background-color: cyan;
+      background-color: red;
     }
   }
 }
@@ -28,7 +28,7 @@
 @mixin two-columns {
   .grid {
     .item {
-      background-color: lightgreen;
+      background-color: orange;
     }
   }
 }
@@ -36,7 +36,7 @@
 @mixin three-columns {
   .grid {
     .item {
-      background-color: orange;
+      background-color: yellow;
     }
   }
 }
@@ -44,7 +44,7 @@
 @mixin four-columns {
   .grid {
     .item {
-      background-color: lightpink;
+      background-color: lightgreen;
     }
   }
 }
@@ -52,7 +52,7 @@
 @mixin five-columns {
   .grid {
     .item {
-      background-color: burlywood;
+      background-color: cyan;
     }
   }
 }
