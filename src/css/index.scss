@@ -1,58 +1,80 @@
 @import "breakpoints";
 
-.grid {
-  border: dashed 1px #abc;
+.gridWrapper {
+  background-color: burlywood;
+  margin: auto;
+  min-width: 310px;
+  margin-bottom: 40px;
+}
+
+.fullWidth {
   width: 100%;
-  height: 200px;
+}
+
+.partWidth {
+  width: 75%;
+}
+
+// Do not define default mobile styles in here so that the styles
+// may be defined at any breakpoint.
+.grid {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: dashed 1px black;
+
+  .col {
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
 
   .item {
-    width: 200px;
+    width: 300px;
     height: 100px;
-    border: dashed 1px green;
+    margin: 0 5px 10px;
+    background-color: #abc;
+    box-sizing: border-box;
+    border: solid 10px grey;
   }
 }
 
 //---------------------------------------------------
-// Change mixins.
+// Layout mixins.
 //---------------------------------------------------
 
-@mixin one-column {
+@mixin layout1 {
   .grid {
-    .item {
-      background-color: red;
+    .col {
+      width: 100%;
     }
   }
 }
 
-@mixin two-columns {
+@mixin layout2 {
   .grid {
-    .item {
-      background-color: orange;
+    flex-direction: row;
+
+    .col {
+      flex-basis: 50%;
     }
   }
 }
 
-@mixin three-columns {
+@mixin layout3 {
   .grid {
-    .item {
-      background-color: yellow;
+    .col {
+      flex-basis: 33.3%;
     }
   }
 }
 
-@mixin four-columns {
+@mixin layout4 {
   .grid {
-    .item {
-      background-color: lightgreen;
-    }
-  }
-}
-
-@mixin five-columns {
-  .grid {
-    .item {
-      background-color: cyan;
+    .col {
+      flex-basis: 25%;
     }
   }
 }
@@ -62,95 +84,65 @@
 //---------------------------------------------------
 
 // Default.
-@include one-column();
+@include layout1();
 
 // Default override.
 @media screen and (min-width: 1px) {
   .bp-0-1 {
-    @include one-column();
+    @include layout1();
   }
   .bp-0-2 {
-    @include two-columns();
+    @include layout2();
   }
   .bp-0-3 {
-    @include three-columns();
+    @include layout3();
   }
   .bp-0-4 {
-    @include four-columns();
-  }
-  .bp-0-5 {
-    @include five-columns();
+    @include layout4();
   }
 }
 
 @media screen and (min-width: $breakpoint1) {
   .bp-1-1 {
-    @include one-column();
+    @include layout1();
   }
   .bp-1-2 {
-    @include two-columns();
+    @include layout2();
   }
   .bp-1-3 {
-    @include three-columns();
+    @include layout3();
   }
   .bp-1-4 {
-    @include four-columns();
-  }
-  .bp-1-5 {
-    @include five-columns();
+    @include layout4();
   }
 }
 
 @media screen and (min-width: $breakpoint2) {
   .bp-2-1 {
-    @include one-column();
+    @include layout1();
   }
   .bp-2-2 {
-    @include two-columns();
+    @include layout2();
   }
   .bp-2-3 {
-    @include three-columns();
+    @include layout3();
   }
   .bp-2-4 {
-    @include four-columns();
-  }
-  .bp-2-5 {
-    @include five-columns();
+    @include layout4();
   }
 }
 
 @media screen and (min-width: $breakpoint3) {
   .bp-3-1 {
-    @include one-column();
+    @include layout1();
   }
   .bp-3-2 {
-    @include two-columns();
+    @include layout2();
   }
   .bp-3-3 {
-    @include three-columns();
+    @include layout3();
   }
   .bp-3-4 {
-    @include four-columns();
-  }
-  .bp-3-5 {
-    @include five-columns();
-  }
-}
-
-@media screen and (min-width: $breakpoint4) {
-  .bp-4-1 {
-    @include one-column();
-  }
-  .bp-4-2 {
-    @include two-columns();
-  }
-  .bp-4-3 {
-    @include three-columns();
-  }
-  .bp-4-4 {
-    @include four-columns();
-  }
-  .bp-4-5 {
-    @include five-columns();
+    @include layout4();
   }
 }
