@@ -13,6 +13,10 @@
   }
 }
 
+//---------------------------------------------------
+// Change mixins.
+//---------------------------------------------------
+
 @mixin one-column {
   .grid {
     .item {
@@ -37,6 +41,48 @@
   }
 }
 
+@mixin four-columns {
+  .grid {
+    .item {
+      background-color: lightpink;
+    }
+  }
+}
+
+@mixin five-columns {
+  .grid {
+    .item {
+      background-color: burlywood;
+    }
+  }
+}
+
+//---------------------------------------------------
+// Breakpoint settings.
+//---------------------------------------------------
+
+// Default.
+@include one-column();
+
+// Default override.
+@media screen and (min-width: 1px) {
+  .bp-0-1 {
+    @include one-column();
+  }
+  .bp-0-2 {
+    @include two-columns();
+  }
+  .bp-0-3 {
+    @include three-columns();
+  }
+  .bp-0-4 {
+    @include four-columns();
+  }
+  .bp-0-5 {
+    @include five-columns();
+  }
+}
+
 @media screen and (min-width: $breakpoint1) {
   .bp-1-1 {
     @include one-column();
@@ -46,6 +92,12 @@
   }
   .bp-1-3 {
     @include three-columns();
+  }
+  .bp-1-4 {
+    @include four-columns();
+  }
+  .bp-1-5 {
+    @include five-columns();
   }
 }
 
@@ -59,6 +111,12 @@
   .bp-2-3 {
     @include three-columns();
   }
+  .bp-2-4 {
+    @include four-columns();
+  }
+  .bp-2-5 {
+    @include five-columns();
+  }
 }
 
 @media screen and (min-width: $breakpoint3) {
@@ -70,5 +128,29 @@
   }
   .bp-3-3 {
     @include three-columns();
+  }
+  .bp-3-4 {
+    @include four-columns();
+  }
+  .bp-3-5 {
+    @include five-columns();
+  }
+}
+
+@media screen and (min-width: $breakpoint4) {
+  .bp-4-1 {
+    @include one-column();
+  }
+  .bp-4-2 {
+    @include two-columns();
+  }
+  .bp-4-3 {
+    @include three-columns();
+  }
+  .bp-4-4 {
+    @include four-columns();
+  }
+  .bp-4-5 {
+    @include five-columns();
   }
 }

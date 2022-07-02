@@ -2,9 +2,9 @@ import style from './css/index.scss';
 
 function init() {
   const element = document.createElement('div');
-  const grid1 = createGrid(['bp-1-1', 'bp-2-2', 'bp-3-3']);
-  const grid2 = createGrid(['bp-2-1', 'bp-3-2']);
-  const grid3 = createGrid(['bp-3-1']);
+  const grid1 = createGrid(['bp-1-2', 'bp-2-3', 'bp-3-4', 'bp-4-5']);
+  const grid2 = createGrid(['bp-2-2', 'bp-3-3', 'bp-4-4']);
+  const grid3 = createGrid(['bp-3-2', 'bp-4-3']);
 
   element.appendChild(grid1);
   element.appendChild(grid2);
