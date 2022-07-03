@@ -88,61 +88,69 @@
 
 // Default override.
 @media screen and (min-width: 1px) {
-  .b0-l1 {
-    @include layout1();
-  }
-  .b0-l2 {
-    @include layout2();
-  }
-  .b0-l3 {
-    @include layout3();
-  }
-  .b0-l4 {
-    @include layout4();
+  .b0-l {
+    &1 {
+      @include layout1();
+    }
+    &2 {
+      @include layout2();
+    }
+    &3 {
+      @include layout3();
+    }
+    &4 {
+      @include layout4();
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint1) {
-  .b1-l1 {
-    @include layout1();
-  }
-  .b1-l2 {
-    @include layout2();
-  }
-  .b1-l3 {
-    @include layout3();
-  }
-  .b1-l4 {
-    @include layout4();
+  .b1-l {
+    &1 {
+      @include layout1();
+    }
+    &2 {
+      @include layout2();
+    }
+    &3 {
+      @include layout3();
+    }
+    &4 {
+      @include layout4();
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint2) {
-  .b2-l1 {
-    @include layout1();
-  }
-  .b2-l2 {
-    @include layout2();
-  }
-  .b2-l3 {
-    @include layout3();
-  }
-  .b2-l4 {
-    @include layout4();
+  .b2-l {
+    &1 {
+      @include layout1();
+    }
+    &2 {
+      @include layout2();
+    }
+    &3 {
+      @include layout3();
+    }
+    &4 {
+      @include layout4();
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint3) {
-  .b3-l1 {
-    @include layout1();
-  }
-  .b3-l2 {
-    @include layout2();
-  }
-  .b3-l3 {
-    @include layout3();
-  }
-  .b3-l4 {
-    @include layout4();
+  .b3-l {
+    &1 {
+      @include layout1();
+    }
+    &2 {
+      @include layout2();
+    }
+    &3 {
+      @include layout3();
+    }
+    &4 {
+      @include layout4();
+    }
   }
 }
