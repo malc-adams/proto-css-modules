@@ -1,0 +1,70 @@
+@import "layout-controller";
+
+// Define optional styles separately so that they may be applied at any breakpoint.
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: dashed 1px black;
+
+  .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  .item {
+    width: 300px;
+    height: 100px;
+    margin: 0 5px 10px;
+    background-color: #abc;
+    box-sizing: border-box;
+    border: solid 10px grey;
+  }
+}
+
+//---------------------------------------------------
+// Layouts
+//---------------------------------------------------
+
+// One column.
+@mixin layout1 {
+  .grid {
+    .col {
+      width: 100%;
+    }
+  }
+}
+
+// Two columns.
+@mixin layout2 {
+  .grid {
+    flex-direction: row;
+
+    .col {
+      flex-basis: 50%;
+    }
+  }
+}
+
+// Three columns.
+@mixin layout3 {
+  .grid {
+    .col {
+      flex-basis: 33.3%;
+    }
+  }
+}
+
+// Four columns.
+@mixin layout4 {
+  .grid {
+    .col {
+      flex-basis: 25%;
+    }
+  }
+}
+
+// Invoke layout controller
+@include control-layout();

@@ -1,0 +1,64 @@
+@import "breakpoints";
+
+//---------------------------------------------------
+// Layout selection
+// Sets the layout according to the layout id.
+//---------------------------------------------------
+@mixin set-layout {
+  &1 {
+    @if mixin-exists("layout1") {
+      @include layout1();
+    }
+  }
+  &2 {
+    @if mixin-exists("layout2") {
+      @include layout2();
+    }
+  }
+  &3 {
+    @if mixin-exists("layout3") {
+      @include layout3();
+    }
+  }
+  &4 {
+    @if mixin-exists("layout4") {
+      @include layout4();
+    }
+  }
+}
+
+//---------------------------------------------------
+// Breakpoint selection
+//---------------------------------------------------
+
+@mixin control-layout {
+  // Default.
+  @if mixin-exists("layout1") {
+    @include layout1();
+  }
+
+  // Default override.
+  @media screen and (min-width: 1px) {
+    .b0-l {
+      @include set-layout();
+    }
+  }
+
+  @media screen and (min-width: $breakpoint1) {
+    .b1-l {
+      @include set-layout();
+    }
+  }
+
+  @media screen and (min-width: $breakpoint2) {
+    .b2-l {
+      @include set-layout();
+    }
+  }
+
+  @media screen and (min-width: $breakpoint3) {
+    .b3-l {
+      @include set-layout();
+    }
+  }
+}
