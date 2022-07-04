@@ -1,6 +1,6 @@
 @import "layout-controller";
 
-// Define optional styles separately so that they may be applied at any breakpoint.
+// Default, one column grid.
 .grid {
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@
   .col {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .item {
@@ -27,15 +28,6 @@
 //---------------------------------------------------
 // Layouts
 //---------------------------------------------------
-
-// One column.
-@mixin layout1 {
-  .grid {
-    .col {
-      width: 100%;
-    }
-  }
-}
 
 // Two columns.
 @mixin layout2 {
